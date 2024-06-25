@@ -18,6 +18,7 @@ router.post("/",
 );
 // Delete Review Route
 router.delete("/:reviewId",
+    isLoggedIn,
     isreviewAuthor,
     wrapAsync(reviewController.destroyReview));
 
